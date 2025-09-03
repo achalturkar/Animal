@@ -1,3 +1,4 @@
+import FAQSection from "@/component/FAQ/FAQ";
 
 
 const Faq = () =>{
@@ -5,10 +6,9 @@ const Faq = () =>{
 
     return(
 
-        <>
-          <h1>FaQ </h1>
-        
-        </>
+        <section className="mt-12">
+           <FAQSection/>        
+        </section>
     )
 
 
