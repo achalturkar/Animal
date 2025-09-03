@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full fixed top-0 z-50 bg-gray-50 border-b border-gray-100 text-black">
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between md:justify-center h-10 gap-12">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between md:justify-center h-10 md:gap-12">
         
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -28,7 +28,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-12 text-sm">
+        <ul className="hidden md:flex gap-12 md:gap-8 lg:gap-12 text-sm">
           {menuItems.map((item) => (
             <li key={item.name}>
               <Link
@@ -62,13 +62,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-50 border-t border-gray-200">
-          <ul className="flex flex-col items-center py-4 space-y-4 text-base">
+        <div className="md:hidden bg-gray-50 border-t border-gray-200 min-h-screen">
+          <ul className="flex flex-col items-Start py-4 space-y-4 text-base ml-8">
             {menuItems.map((item) => (
               <li key={item.name}>
                 <Link
                   href={item.href}
-                  className="hover:text-gray-800 transition-colors"
+                  className="hover:text-gray-800 transition-colors text-2xl font-semibold"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
